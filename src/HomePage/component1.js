@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { fontSize } from '@material-ui/system';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import Avatar from 'material-ui/Avatar'
+import MuiThemeProvider from '@material-ui/styles/ThemeProvider'
+import Avatar from '@material-ui/core/Avatar'
 class ComponentName extends Component {
   render() {
     return (
@@ -70,10 +69,12 @@ class ComponentName extends Component {
 const styles = {
 
     Avatar:{
+        marginLeft: "10px",
         width:87,
         height:87,
     },
     Name:{
+      marginLeft: "15px",
         float:'left',
         fontSize:10,
         height:14,

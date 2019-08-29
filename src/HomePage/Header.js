@@ -1,14 +1,10 @@
 import React, { Component } from 'react'
 import Button from '@material-ui/core/Button'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import Avatar from 'material-ui/Avatar'
+import MuiThemeProvider from '@material-ui/styles/ThemeProvider'
+import Avatar from '@material-ui/core/Avatar'
 import '../App.css'
-import { red600, yellow100 } from 'material-ui/styles/colors';
-import { white } from 'material-ui/styles/colors';
-import Card from 'material-ui/Card'
-import { yellow } from '@material-ui/core/colors';
-import { CardMedia } from '@material-ui/core';
-import { NONAME } from 'dns';
+import {red} from '@material-ui/core/colors';
+import Card from '@material-ui/core/Card'
 
 class Header extends Component {
   render() {
@@ -34,19 +30,19 @@ class Header extends Component {
 
                 <div style={styles.Box}>
                   <Card style={styles.Card1}>
-                      <h1 style={{color:white,
+                      <h1 style={{color:"#FFFFFF",
                        marginLeft:"5%",marginTop:"5%",
-                       fontFamily:"Bebas Neue"}} >Read Our<br/> Story</h1>
+                       fontFamily:"BebasNeue"}} >Read Our<br/> Story</h1>
                   </Card>
 
                   <Card style={styles.Card2}>
-                      <h1 style={{color:white,
+                      <h1 style={{color:"#FFFFFF",
                        marginLeft:"5%",marginTop:"5%",
                        fontFamily:"Bebas Neue"}} >Check<br/>Events</h1>
                   </Card>
                   
                   <Card style={styles.Card3}>
-                      <h1 style={{color:white,
+                      <h1 style={{color:"#FFFFFF",
                        marginLeft:"5%",marginTop:"5%",
                        fontFamily:"Bebas Neue"}} >Check Our<br/>Centers</h1>
                   </Card>
@@ -68,17 +64,17 @@ class Header extends Component {
 }
 const styles = {
   button:{
-  backgroundColor:red600, 
+  backgroundColor:red, 
   height:33,width:91, 
   fontSize:14,
   fontWeight:"bold",
   marginTop: 15,
-  color:white,
+  color:"#FFFFFF",
   borderRadius: 50,
 },
   ButtonVol:{
     backgroundColor:"#7CDBD5",
-    color:white,
+    color:"#FFFFFF",
     fontWeight: 'bold',
     borderRadius:50,
     display: 'block',
