@@ -8,6 +8,8 @@ import { white } from 'material-ui/styles/colors';
 import Card from 'material-ui/Card'
 import { yellow } from '@material-ui/core/colors';
 import { CardMedia } from '@material-ui/core';
+import { NONAME } from 'dns';
+
 class Header extends Component {
   render() {
   
@@ -27,39 +29,38 @@ class Header extends Component {
                     </h1>
                     <h1 style={styles.Text2}>
                       Hello,User
-                    </h1>
-                </div>  
-              <div>
-                <scroll>
-                  <Card style={styles.Card}>
+                      </h1>
+                </div>
+
+                <div style={styles.Box}>
+                  <Card style={styles.Card1}>
                       <h1 style={{color:white,
                        marginLeft:"5%",marginTop:"5%",
                        fontFamily:"Bebas Neue"}} >Read Our<br/> Story</h1>
                   </Card>
-                  
-                  <Card style={styles.Card}>
+
+                  <Card style={styles.Card2}>
                       <h1 style={{color:white,
                        marginLeft:"5%",marginTop:"5%",
                        fontFamily:"Bebas Neue"}} >Check<br/>Events</h1>
                   </Card>
                   
-                  <Card style={styles.Card}>
+                  <Card style={styles.Card3}>
                       <h1 style={{color:white,
                        marginLeft:"5%",marginTop:"5%",
                        fontFamily:"Bebas Neue"}} >Check Our<br/>Centers</h1>
                   </Card>
-
-                </scroll>
-                  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                  
-                  <h1 style={{fontSize:11,marginLeft:"40%"}}>" Give a man a fish and you feed him for a day.<br/> 
-                  Teach a man to fish and you feed him for a lifetime. "
-                  </h1><br/><br/>
+                </div>
+                <br/>
+                  <h1 style={{fontSize:11,display: 'flex', justifyContent: 'center'}}>"Give a man a fish and you feed him for a day.<br/> 
+                  Teach a man to fish and you feed him for a lifetime."
+                  </h1>
+                  <br/>
+                <div style={{display: 'flex', justifyContent: 'center'}}>       
                   <Button
                   style={styles.ButtonVol}>Become a Volunteer
-                    </Button>
-                   
-              </div>
+                  </Button>
+                    </div>
         </MuiThemeProvider>     
       </div>
     )
@@ -80,7 +81,7 @@ const styles = {
     color:white,
     fontWeight: 'bold',
     borderRadius:50,
-    marginLeft:"40%",
+    display: 'block',
   },
   Avatar:{
     height:50,
@@ -89,15 +90,35 @@ const styles = {
     marginRight: 20,
     marginBottom: 40,
   },
-  Card:{
+  Card1:{
     height:176,
     width:274,
+    display: 'flex',
     backgroundColor:"#F9BE02",
-    float:"left",
     marginLeft:"10%",
     borderRadius: "5%",
+    flexShrink: 0,
   },
-    
+  
+  Card2:{
+    height:176,
+    width:274,
+    display: 'flex',
+    backgroundColor:"#F53240",
+    marginLeft:"10%",
+    borderRadius: "5%",
+    flexShrink: 0,
+  },
+  
+  Card3:{
+    height:176,
+    width:274,
+    display: 'flex',
+    backgroundColor:"#02C470",
+    marginLeft:"10%",
+    borderRadius: "5%",
+    flexShrink: 0,
+  },
   Text1:{
       fontSize:10,
       marginLeft:"10%",
@@ -108,12 +129,10 @@ const styles = {
     marginTop:"1%",
     marginLeft:"10%" ,
   },
-  swiperContainer: {
-    width:"100%",
-    height:"100%",
+  Box:{
+    display: 'flex',
+    overflowX:"auto",
+    overflowY:"hidden",
   },
-  cardSlide:{
-
-  }
 };
 export default Header;
